@@ -11,4 +11,9 @@ public class MainController {
 		return "index";
 	}
 	
+	@RequestMapping("/add-product")
+	public String addProduct() {
+		return "addProductForm";
+	}
+	
 }

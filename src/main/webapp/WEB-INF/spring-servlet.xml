@@ -62,7 +62,7 @@
 		<!-- sessionfactory in dao class -->
 		<bean name="productDao"
 			  class="productapp.dao.ProductDao">
-			  <property name="sessionFactory" value="factory" />
+			  <property name="sessionFactory" ref="factory" />
 		</bean>
 		
 		<!-- HibernateTrxnManager bean for DB write mode & automatic trxn mgmt -->

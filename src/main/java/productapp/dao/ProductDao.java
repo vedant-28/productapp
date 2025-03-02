@@ -18,6 +18,10 @@ public class ProductDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
+	public void setSessionFactory(SessionFactory sessionFactory){
+	     this.sessionFactory = sessionFactory;
+	}
+	
 	// Create
 	public void createProduct(Product product) {
 		this.sessionFactory.getCurrentSession().persist(product);
