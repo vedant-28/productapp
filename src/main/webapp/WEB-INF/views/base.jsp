@@ -15,4 +15,4 @@
 		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" 
 		crossorigin="anonymous"></script>
 
-<title>${title }</title>
+<title><c:out value="${title }">Product app</c:out></title>
