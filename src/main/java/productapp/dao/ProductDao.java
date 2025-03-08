@@ -1,6 +1,7 @@
 package productapp.dao;
 
 import java.util.List;
+import java.util.Objects;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,13 @@ public class ProductDao {
 	     this.sessionFactory = sessionFactory;
 	}
 	
-	// Create
+	// Create-Update
 	public void createProduct(Product product) {
-		this.sessionFactory.getCurrentSession().persist(product);
+		if(Objects.isNull(sessionFactory.getCurrentSession().find(Product.class, product.getProductId()))) {
+			this.sessionFactory.getCurrentSession().persist(product);
+		} else {
+			this.sessionFactory.getCurrentSession().merge(product);
+		}
 	}
 	
 	// Get single product

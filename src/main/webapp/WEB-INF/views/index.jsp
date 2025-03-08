@@ -25,9 +25,12 @@
       								<td>${p.name }</td>
       								<td>${p.description }</td>
       								<td class="font-weight-bold">&#8377; ${p.price }</td>
-      								<td>
+      								<td class="py-2">
       									<a href="delete-product/${p.productId }">
       										<i class="fa-solid fa-trash text-danger"></i>
+      									</a>
+      									<a href="update-product/${p.productId }">
+      										<i class="fa-solid fa-pen-nib text-primary"></i>
       									</a>
       								</td>
     							</tr>
